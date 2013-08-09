@@ -1,13 +1,13 @@
 Solutions to Project Euler problems.
 
 I've been programming a lot of Haskell recently,
-but I'm trying to solve these problems in idiomatic Python.
+but I'm trying to solve these problems in elegant and idiomatic Python.
 Suggestions for improvement are very welcome!
 
-To make my solutions as easy to read as possible,
-the problem statements are included my source file.
-Credit for them belongs to projecteuler.net.
+My code is under the BSD license, so do whatever you want.
 
-BSD license so do whatever you want.
+To make my solutions as easy to read as possible, the problem statements are
+included my source file. Credit for them belongs to projecteuler.net,
+so you might need to remove it if you reuse my code for something else.
 
 Solutions are my original work except where noted in the individual source file.
