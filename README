@@ -1,5 +1,13 @@
-Solutions are all in Python. I've been programming a lot of Haskell recently,
+Solutions to Project Euler problems.
+
+I've been programming a lot of Haskell recently,
 but I'm trying to solve these problems in idiomatic Python.
 Suggestions for improvement are very welcome!
+
+To make my solutions as easy to read as possible,
+the problem statements are included my source file.
+Credit for them belongs to projecteuler.net.
+
+BSD license so do whatever you want.
 
 Solutions are my original work except where noted in the individual source file.
