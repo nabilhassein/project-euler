@@ -46,9 +46,9 @@ def problem5(n):
 
   primes         = sieve(n)
   maxPrimeCounts = [0] * n
-  for xs in factorizations:
+  for f in factorizations:
     for p in primes:
-      maxPrimeCounts[p] = max(maxPrimeCounts[p], xs.count(p))
+      maxPrimeCounts[p] = max(maxPrimeCounts[p], f.count(p))
 
   product = 1
   for prime, multiplicity in enumerate(maxPrimeCounts):
