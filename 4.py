@@ -12,10 +12,10 @@ def problem4():
   for i in range(100, 1000):
     for j in range(100, 1000):
       product = i * j
-      string = str(product)
+      string  = str(product)
       if product > maxproduct and string == string[::-1]:
         maxproduct = product
-        result = string
-  return result
+        palindrome = string
+  return palindrome
 
 print problem4()
