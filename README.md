@@ -4,7 +4,7 @@ I've been programming a lot of Haskell recently,
 but I'm trying to solve these problems in elegant and idiomatic Python.
 Suggestions for improvement are very welcome!
 
-My code is under the BSD license, so do whatever you want.
+My code is under the Simplified BSD license, so do whatever you want.
 
 To make my solutions as easy to read as possible, the statement of each problem
 is included at the top of the relevant my source file.
