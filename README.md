@@ -4,7 +4,9 @@ I've been programming a lot of Haskell recently,
 but I'm trying to solve these problems in elegant and idiomatic Python.
 Suggestions for improvement are very welcome!
 
-My code is under the Simplified BSD license, so do whatever you want.
+My code is under the
+[Simplified BSD license](https://en.wikipedia.org/wiki/BSD_licenses#2-clause_license_.28.22Simplified_BSD_License.22_or_.22FreeBSD_License.22.29),
+so do whatever you want.
 
 To make my solutions as easy to read as possible, the statement of each problem
 is included at the top of the relevant my source file.
