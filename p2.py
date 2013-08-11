@@ -9,13 +9,19 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed
 # four million, find the sum of the even-valued terms.
 
-def problem2():
-  sum = 0
+def fibs():
   previous, current = 0, 1
-  while current < 4000000:
+  while True:
     previous, current = current, previous + current
-    if current % 2 == 0:
-      sum += current
+    yield current
+
+def problem2(bound):
+  sum = 0
+  for n in fibs():
+    if n >= bound:
+      break
+    if n % 2 == 0:
+      sum += n
   return sum
 
-print problem2()
+print problem2(4000000)

@@ -33,7 +33,7 @@ def sieve(n):
     if A[i]:
       for j in range(i*i, n)[::i]:
         A[j] = False
-  return [index for index, prime in enumerate(A) if prime]
+  return [number for number, isPrime in enumerate(A) if isPrime]
 
 # based on https://en.wikipedia.org/wiki/Trial_division#Method
 def primeFactors(n):
@@ -55,8 +55,8 @@ def primeFactors(n):
 # then the number of factors of n is (e1 + 1)*(e2 + 1)* ... *(ek + 1)."
 def divisorCount(n):
   factors = primeFactors(n)
-  if not factors: return 0
-  
+  if not factors:
+    return 0
   multiplicities = [0] * (1 + max(factors))
   for f in factors:
     multiplicities[f] += 1

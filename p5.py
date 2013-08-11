@@ -7,13 +7,6 @@
 # What is the smallest positive number that is evenly divisible by all of the
 # numbers from 1 to 20?
 
-### END PROBLEM STATEMENT; BEGIN MY COMMENTARY
-
-# My strategy is to create a list satisfying the following:
-# if i is composite, list[i] == 0
-# if i is prime, list[i] == the maximum multiplicity of the prime number i
-#   in the prime factorization of any integer from 1 to n
-# the answer is the product of all p^n where p is prime, n == list[p]
 
 # based on https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Implementation
 def sieve(n):
@@ -22,7 +15,7 @@ def sieve(n):
     if A[i]:
       for j in range(i*i, n)[::i]:
         A[j] = False
-  return [index for index, prime in enumerate(A) if prime]
+  return [number for number, isPrime in enumerate(A) if isPrime]
 
 # based on https://en.wikipedia.org/wiki/Trial_division#Method
 def primeFactors(n):
@@ -38,22 +31,16 @@ def primeFactors(n):
     factors.append(n)
   return factors
 
-
 def problem5(n):
-  factorizations = [[]] * n
+  primes          = sieve(n)
+  maxMultiplicity = [0] * n
   for i in range(0, n):
-    factorizations[i] = primeFactors(i)
-
-  primes         = sieve(n)
-  maxPrimeCounts = [0] * n
-  for f in factorizations:
     for p in primes:
-      maxPrimeCounts[p] = max(maxPrimeCounts[p], f.count(p))
+      maxMultiplicity[p] = max(maxMultiplicity[p], primeFactors(i).count(p))
 
   product = 1
-  for prime, multiplicity in enumerate(maxPrimeCounts):
-    if multiplicity > 0:
-      product *= (prime**multiplicity)
+  for k, multiplicity in enumerate(maxMultiplicity):
+    product *= k**multiplicity
   return product
 
 print problem5(20)

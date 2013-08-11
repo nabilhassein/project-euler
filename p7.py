@@ -15,7 +15,7 @@ def sieve(n):
     if A[i]:
       for j in range(i*i, n)[::i]:
         A[j] = False
-  return [index for index, prime in enumerate(A) if prime]
+  return [number for number, isPrime in enumerate(A) if isPrime]
 
 
 # for origin of 'bound', see

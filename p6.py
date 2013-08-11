@@ -14,7 +14,7 @@
 # hundred natural numbers and the square of the sum.
 
 def sumOfSquares(n):
-  return sum([i*i for i in range(1, n+1)])
+  return sum([i**2 for i in range(1, n+1)])
 
 def squareOfSum(n):
   return sum([i for i in range(1, n+1)]) ** 2
