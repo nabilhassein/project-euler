@@ -31,7 +31,7 @@ def sieve(n):
   A = [False, False] + [True] * (n - 2)
   for i in range(2, int(n**0.5)):
     if A[i]:
-      for j in range(i*i, n)[::i]:
+      for j in range(i*i, n, i):
         A[j] = False
   return [number for number, isPrime in enumerate(A) if isPrime]
 
